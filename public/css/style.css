@@ -10,8 +10,7 @@ body {
 }
 
 #page-wrapper {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    
 }
 
 .effect {
@@ -48,10 +47,18 @@ body {
     margin: 0;
 }
 
+.chat-card {
+    padding: 0;
+}
+
 .chat-card .card-body {
     min-height: 300px;
-    max-height: 600px;
+    max-height: 400px;
     overflow-y: scroll;
+}
+
+.chat-container {
+    min-height: calc(100vh - 102px);
 }
 
 .footer {
