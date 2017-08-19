@@ -30,20 +30,28 @@ var cfenv = require('cfenv');
 // get the app environment from Cloud Foundry
 var env = cfenv.getAppEnv();
 
-// Watson Conversation SDK
-var Conversation = require('watson-developer-cloud/conversation/v1');
-var conversation = new Conversation({
-    // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
-    // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-    // usernames: '<username>',
-    // password: '<password>',
-    url: 'https://gateway.watsonplatform.net/conversation/api',
-    version_date: '2016-10-21',
-    version: 'v1'
-});
+var CheckWorkspaceMiddleware = (req, res, next) => {
+    var workspace = process.env.WORKSPACE_ID;
+    if (!workspace || workspace === '<workspace-id>') {
+        console.error('WORKSPACE ID not set');
+        return res.json({
+            'output': {
+                'text': 'The app has not been configured with a <b>WORKSPACE_ID</b> environment variable. Please refer to the ' + '<a href="https://github.com/watson-developer-cloud/conversation-simple">README</a> documentation on how to set this variable. <br>' + 'Once a workspace has been defined the intents may be imported from ' + '<a href="https://github.com/watson-developer-cloud/conversation-simple/blob/master/training/car_workspace.json">here</a> in order to get a working application.'
+            }
+        });
+    } else {
+        // Attach WorkspaceID to request object
+        req.workspaceId = workspace;
+        next();
+    }
+}
+
+app.use(CheckWorkspaceMiddleware);
 
 // Sets up routes
-require('./server/routes')(app, conversation);
+const routes = require('./server/routes');
+
+app.use('/api', routes);
 
 // start server on the specified port and binding host
 app.listen(env.port, '0.0.0.0', function () {
