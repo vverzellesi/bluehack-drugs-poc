@@ -52,13 +52,21 @@ body {
 }
 
 .chat-card .card-body {
-    min-height: 350px;
-    max-height: 350px;
+    min-height: 320px;
+    max-height: 320px;
     overflow-y: scroll;
 }
 
 .chat-container {
     min-height: calc(100vh - 102px);
+}
+
+.card-footer {
+    padding: 0.75rem;
+}
+
+.card-footer form .form-group {
+    margin-bottom: 0;
 }
 
 .footer {
