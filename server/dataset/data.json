@@ -1,0 +1,9 @@
+[
+	{
+	  "name": "Advil",
+	  "contraindication": "Menores de 12 anos",
+	  "interactsWith": ["Aspirina", "Tylenol", "Cochicimil", "Prednisona", "Corticotrofina", "Insulina"],
+	  "sideEffects": ["hipersensibilidade", "náusea", "vômito", "azia", "tontura"],
+	  "pregnantsAllowed": true
+	}
+]
