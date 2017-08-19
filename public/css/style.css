@@ -52,8 +52,8 @@ body {
 }
 
 .chat-card .card-body {
-    min-height: 300px;
-    max-height: 400px;
+    min-height: 350px;
+    max-height: 350px;
     overflow-y: scroll;
 }
 

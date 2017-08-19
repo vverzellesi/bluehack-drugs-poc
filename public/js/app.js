@@ -11,7 +11,8 @@
 
     angular.module('chatbot.app', [
         'ngRoute',
-        'chatbot.app.services'
+        'chatbot.app.services',
+        'luegg.directives',
     ]);
 
     angular

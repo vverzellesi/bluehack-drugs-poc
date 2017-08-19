@@ -25,6 +25,7 @@
                 var message = {};
                 message["recipient"] = "user";
                 message["content"] = vm.input;
+                message["date"] = (new Date()).toTimeString().substr(0,8)
                 vm.messages.push(message);
                 vm.input = "";
                 $log.log(vm.messages);
@@ -35,6 +36,8 @@
                             var reply = {};
                             reply["recipient"] = "watson";
                             reply["content"] = data.output.text[0];
+                            reply["date"] = (new Date()).toTimeString().substr(0,8)
+
                             vm.messages.push(reply);
                         }
                     });

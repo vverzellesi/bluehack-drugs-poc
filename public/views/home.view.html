@@ -8,7 +8,7 @@
             </div> -->
         </div>
         <!-- Body -->
-        <div class="card-body">
+        <div class="card-body" scroll-glue>
             <ul class="chat" ng-repeat="message in vm.messages">
                 <li class="left clearfix" ng-if="message.recipient === 'user'">
                     <span class="chat-img pull-left">
@@ -18,7 +18,7 @@
                         <div class="header">
                             <strong class="primary-font">You</strong>
                             <small class="pull-right text-muted">
-                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                        <i class="fa fa-clock-o fa-fw"></i> {{message.date}}
                             </small>
                         </div>
 
@@ -34,7 +34,7 @@
                     <div class="chat-body clearfix">
                         <div class="header">
                             <small class=" text-muted">
-                                    <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                    <i class="fa fa-clock-o fa-fw"></i> {{message.date}}</small>
                             <strong class="pull-right primary-font">Watson</strong>
                         </div>
                         <p>
