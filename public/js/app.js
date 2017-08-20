@@ -11,6 +11,7 @@
 
     angular.module('chatbot.app', [
         'ngRoute',
+        'ngAudio',
         'chatbot.app.services',
         'luegg.directives',
     ]);
