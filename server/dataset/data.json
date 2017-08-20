@@ -1,9 +1,182 @@
 {
-	"advil": {
-	  "name": "Advil",
-	  "contraindication": "Menores de 12 anos",
-	  "interactsWith": ["Aspirina", "Tylenol", "Cochicimil", "Prednisona", "Corticotrofina", "Insulina"],
-	  "sideEffects": ["hipersensibilidade", "náusea", "vômito", "azia", "tontura"],
-	  "pregnantsAllowed": false
-	}
+    "advil": {
+      "name": "Advil",
+      "contraindication": ["menores de 12 anos"],
+      "contraindicationQuestion": "Você tem menos de 12 anos?",
+      "interactsWith": ["Aspirina", "Tylenol", "Cochicimil", "Prednisona", "Corticotrofina", "Insulina"],
+      "interactsWithQuestion": "Você fez uso de Aspirina, Tylenol, Cochicimil, Prednisona, Corticotrofina, Insulina nas últimas 24 horas?",
+      "sideEffects": ["hipersensibilidade", "náusea", "vômito", "azia", "tontura"],
+      "pregnantsAllowed": true
+    },
+    "sorine": {
+      "name": "Sorine",
+      "contraindication": ["menores de 12 anos"],
+      "contraindicationQuestion": "Você tem menos de 12 anos?",
+      "interactsWith": ["Amtriptilina", "Levalbuterol"],
+      "interactsWithQuestion": "Você fez uso de Amtriptilina, Levalbuterol nas últimas 24 horas?",
+      "sideEffects": ["queimação", "ardência", "espirros"],
+      "pregnantsAllowed": false
+    },
+    "dorflex": {
+      "name": "Dorflex",
+      "contraindication": ["menores de 12 anos"],
+      "contraindicationQuestion": "Você tem menos de 12 anos?",
+      "interactsWith": ["Doloxene-A", "Amplictil", "Metotrexato"],
+      "interactsWithQuestion": "Você fez uso de Doloxene-A, Amplictil, Metotrexato nas últimas 24 horas?",
+      "sideEffects": ["alterações do batimento cardíaco", "boca seca", "sede"],
+      "pregnantsAllowed": false
+    },
+    "microvlar": {
+      "name": "Microvlar",
+      "contraindication": ["menores de 15", "Maiores de 55"],
+      "contraindicationQuestion": "Você é menor de 15 ou maior do que 65 anos?",
+      "interactsWith": ["Fenitoína", "Gardenal", "Pridona", "Rifampicina"],
+      "interactsWithQuestion": "Você fez uso de Fenitoína, Gardenal, Pridona, Rifampicina nas últimas 24 horas?",
+      "sideEffects": ["náuseas", "dor abdominal", "vômitos", "diarreia"],
+      "pregnantsAllowed": false
+    },
+    "rivotril": {
+      "name": "Rivotril",
+      "contraindication": ["insuficiência respiratória", "insuficiência hepática"],
+      "contraindicationQuestion": "Você tem insuficiência respiratória ou hepática?",
+      "interactsWith": ["Fenitoína", "Fenobarbital", "Bebidas alcóolicas", "Depakene"],
+      "interactsWithQuestion": "Você fez uso de Fenitoína, Fenobarbital, Bebidas alcóolicas, Depakene nas últimas 24 horas?",
+      "sideEffects": ["fadiga", "sonolência", "depressão respiratória"],
+      "pregnantsAllowed": false
+    },
+    "neosaldina": {
+      "name": "Neosaldina",
+      "contraindication": ["menores de 12 anos"],
+      "contraindicationQuestion": "Você tem menos de 12 anos?",
+      "interactsWith": ["Bebidas alcóolicas", "Ciclosporina", "Amplictil"],
+      "interactsWithQuestion": "Você fez uso de Bebidas alcóolicas, Ciclosporina, Amplictil nas últimas 24 horas?",
+      "sideEffects": ["choque anafilático", "discrasias sanguíneas"],
+      "pregnantsAllowed": true
+    },
+    "buscopan": {
+      "name": "Buscopan",
+      "contraindication": ["maior do que 65 anos"],
+      "contraindicationQuestion": "Você é maior do que 65 anos?",
+      "interactsWith": ["Amitriptilina", "Hixizine", "Salbutamol", "Amplictil"],
+      "interactsWithQuestion": "Você fez uso de Amitriptilina, Hixizine, Salbutamol, Amplictil nas últimas 24 horas?",
+      "sideEffects": ["reações cutâneas", "urticária", "prurido", "taquicardia"],
+      "pregnantsAllowed": true
+    },
+    "tylenol": {
+      "name": "Tylenol",
+      "contraindication": ["alergia ao paracetamol"],
+      "contraindicationQuestion": "Você tem alergia a paracetamol?",
+      "interactsWith": ["Bebida alcoólica"],
+      "interactsWithQuestion": "Você fez uso de bebida alcoólica nas últimas 24 horas?",
+      "sideEffects": ["reações alérgicas"],
+      "pregnantsAllowed": true
+    },
+    "novalgina":{
+      "name": "Novalgina",
+      "contraindication": ["menores de 3 meses"],
+      "contraindicationQuestion": "O paciente tem menos de 3 meses de idade?",
+      "interactsWith": ["Ciclosporina", "Metotrexato"],
+      "interactsWithQuestion": "Você fez uso de Ciclosporina, Metotrexato nas últimas 24 horas?",
+      "sideEffects": ["prurido", "ardor", "rubor"],
+      "pregnantsAllowed": true
+    },
+    "puram74": {
+      "name": "Puram T4",
+      "contraindication": ["infarto do miocárdio recente", "tireotoxicose não tratada"],
+      "contraindicationQuestion": "Você teve infarto do miocárdio recente ou tem tereotoxicose não tratada?",
+      "interactsWith": ["Pradaxa", "Sucrafilm", "Rifampicina", "Colestiramina"],
+      "interactsWithQuestion": "Você fez uso de Pradaxa, Sucrafilm, Rifampicina, Colestiramina nas últimas 24 horas?",
+      "sideEffects": ["taquicardia", "palpitações", "arritmias cardíacas"],
+      "pregnantsAllowed": true
+    },
+    "losartana": {
+      "name": "Losartana",
+      "contraindication": ["diabetes"],
+      "contraindicationQuestion": "Você tem diabetes?",
+      "interactsWith": ["Bebida alcoólica"],
+      "interactsWithQuestion": "Você fez uso de bebida alcoólica nas últimas 24 horas?",
+      "sideEffects": ["dor abdominal","fadiga","dor torácica"],
+      "pregnantsAllowed": false
+    },
+    "sinvastatina": {
+      "name": "Sinvastatina",
+      "contraindication": ["doença no fígado"],
+      "contraindicationQuestion": "Você tem doença no fígado?",
+      "interactsWith": ["Ciclosporina", "Cetoconazol", "Eritromicina", "Verapamil"],
+      "interactsWithQuestion": "Você fez uso de Ciclosporina, Cetoconazol, Eritromicina, Verapamil nas últimas 24 horas?",
+      "sideEffects": ["fraqueza muscular"],
+      "pregnantsAllowed": false
+    },
+    "levitra": {
+      "name": "Levitra",
+      "contraindication": ["menores de 18 anos"],
+      "contraindicationQuestion": "Você é menor de 18 anos?",
+      "interactsWith": ["Eritromicina", "Cetoconazol", "Indinavir", "Nicorandil"],
+      "interactsWithQuestion": "Você fez uso de Eritromicina, Cetoconazol, Indinavir, Nicorandil nas últimas 24 horas?",
+      "sideEffects": ["dores de cabeça","tonturas","congestão nasal"],
+      "pregnantsAllowed": false
+    },
+    "glifage": {
+      "name": "Glifage",
+      "contraindication": ["hipersensibilidade à metformina","cetoacidose diabética"],
+      "contraindicationQuestion": "Você tem hipersensibilidade à metformina ou cetoacidose diabética?",
+      "interactsWith": ["Bebidas alcóolicas", "Decadron", "Betametasona", "Salbutamol"],
+      "interactsWithQuestion": "Você fez uso de Bebidas alcóolicas, Decadron, Betametasona, Salbutamol nas últimas 24 horas?",
+      "sideEffects": ["acidose láctica","diminuição da absorção de vitamina B12","distúrbios do paladar"],
+      "pregnantsAllowed": true
+    },
+    "ciclo21": {
+      "name": "Ciclo 21",
+      "contraindication": ["trombose venosa profunda","tromboembolismo","doença vascular cerebral"],
+      "contraindicationQuestion": "Você tem trombose venosa profunda, tromboembolismo ou doença vascular cerebral?",
+      "interactsWith": ["Rifampicina", "Fenobarbital", "Fenitoína", "Pridona", "Dexametasona"],
+      "interactsWithQuestion": "Você fez uso de Rifampicina, Fenobarbital, Fenitoína, Pridona, Dexametasona nas últimas 24 horas?",
+      "sideEffects": ["maior risco de eventos tromboembólicos e trombóticos arteriais e venosos", "infarto do miocárdio", "acidente vascular cerebral"],
+      "pregnantsAllowed": false
+    },
+    "salonpas": {
+      "name": "Salonpas",
+      "contraindication": ["hipersensibilidade ao ácido acetilsalicílico"],
+      "contraindicationQuestion": "Você tem hipersensibilidade ao ácido acetilsalicílico?",
+      "interactsWith": ["Bebida alcoólica"],
+      "interactsWithQuestion": "Você fez uso de bebida alcoólica nas últimas 24 horas?",
+      "sideEffects": ["irritações cutâneas como hiperemia", "prurido", "eritema"],
+      "pregnantsAllowed": true
+    },
+    "lexotan": {
+      "name": "Lexotan",
+      "contraindication": ["insuficiência respiratória grave", "insuficiência hepática grave"],
+      "contraindicationQuestion": "Você tem insuficiência respiratória grave ou insuficiência hepática grave?",
+      "interactsWith": ["Bebida alcóolica", "Bromazepam"],
+      "interactsWithQuestion": "Você fez uso de Bebida alcóolica, Bromazepam nas últimas 24 horas?",
+      "sideEffects": ["Confusão mental", "perturbações emocionais"],
+      "pregnantsAllowed": true
+    },
+    "frontal": {
+      "name": "Frontal",
+      "contraindication": ["pacientes portadores de miastenia gravis","glaucoma de ângulo estreito agudo"],
+      "contraindicationQuestion": "Você é portador de miastenia grave ou glaucoma de ângulo estreito agudo?",
+      "interactsWith": ["Bebida alcóolica", "Cetoconazol", "Nefazodona", "Fluoxetina"],
+      "interactsWithQuestion": "Você fez uso de Bebida alcóolica, Cetoconazol, Nefazodona, Fluoxetina nas últimas 24 horas?",
+      "sideEffects": ["sedação e sonolência","diminuição do apetite", "confusão", "depressão"],
+      "pregnantsAllowed": true
+    },
+    "lasix": {
+      "name": "Lasix",
+      "contraindication": ["insuficiência renal com anúria", "pré-coma e coma hepático associado com encefalopatia hepática"],
+      "contraindicationQuestion": "Você tem insuficiência renal com anúria ou pré-coma e coma hepático associado com encefalopatia hepática?",
+      "interactsWith": ["Gentamicina", "Cisplatina", "Hidrato de cloral"],
+      "interactsWithQuestion": "Você fez uso de Gentamicina, Cisplatina, Hidrato de cloral nas últimas 24 horas?",
+      "sideEffects": ["tendência à trombose","vasculite","náuseas"],
+      "pregnantsAllowed": false
+    },
+    "propranolol": {
+      "name": "Propranolol",
+      "contraindication": ["choque cardiogênico", "bradicardia sinusal","asma brônquica"],
+      "contraindicationQuestion": "Você tem choque cardiogênico, bradicardia sinusal ou asma brônquica?",
+      "interactsWith": ["Bebida alcóolica", "Fenitoína", "Fenobarbital", "Rifampicina"],
+      "interactsWithQuestion": "Você fez uso de Bebida alcóolica, Fenitoína, Fenobarbital, Rifampicina nas últimas 24 horas?",
+      "sideEffects": ["depressão mental manifestada por insônia", "lassidão", "fraqueza", "fadiga"],
+      "pregnantsAllowed": true
+    }
 }

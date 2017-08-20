@@ -27,29 +27,31 @@ class ConversationController {
                 if (data.entities.length > 0)
                     var drug = data.entities[0].value;
 
-                switch (data.output.command) {
-                    case "check_pregnancy":                                                
-                        context.checkPregnancy = Drugs.checkAttribute(drug, 'pregnantsAllowed');
-                        const newPayload = {
-                            workspace_id: req.workspaceId,
-                            context: context,
-                            input: {
-                                text: ""
-                            }
+                if (data.output.command === "check_params") {
+                    // attach params to context
+                    context["checkPregnancy"] = Drugs.getAttribute(drug, 'pregnantsAllowed');
+                    context["contraindicationQuestion"] = Drugs.getAttribute(drug, 'contraindicationQuestion');
+                    context["interactsWithQuestion"] = Drugs.getAttribute(drug, 'interactsWithQuestion');
+                    
+                    // dummy payload to update the context
+                    const dummyPayload = {
+                        workspace_id: req.workspaceId,
+                        context: context,
+                        input: {
+                            text: ""
                         }
-                        return conversationService.message(newPayload);
-                        break;
-                    default:
-                        console.log('default')
-                        break;
+                    }
+
+                    return conversationService.message(dummyPayload);
                 }
 
+                console.log(data);
                 res.json(data);
             })
-            .then(function (data) {
-                if (data) {
-                    context = data.context;
-                    res.json(data);
+            .then(function (result) {
+                if (result) {
+                    context = result.context;
+                    res.json(result);
                 }
             })
             .catch(err => {

@@ -10,6 +10,10 @@ body {
 
 #page-wrapper {}
 
+#about-wrapper {
+    margin-top: 30px;
+}
+
 .effect {
     -webkit-box-shadow: 0 0 3px rgb(100, 100, 100);
     -moz-box-shadow: 0 0 3px rgb(100, 100, 100);
