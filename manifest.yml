@@ -3,3 +3,4 @@ applications:
  - name: bluehack-drugs-poc
    random-route: true
    memory: 256M
+   host: bluehack-drugs-poc
