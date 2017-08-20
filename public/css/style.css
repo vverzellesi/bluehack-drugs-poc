@@ -88,3 +88,46 @@ body {
     height: 50px;
     width: 50px;
 }
+
+.profile-pic {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.profile-pic {
+    height: 75px;
+    width: 75px;
+    margin-right: 10px;
+}
+
+.about-team {
+    font-weight: 100;
+}
+
+.team-members {
+    text-align: center;
+}
+
+.team-members img {
+    display: inline-block;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .profile-pic {
+        height: 100px;
+        width: 100px;
+        margin-right: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
