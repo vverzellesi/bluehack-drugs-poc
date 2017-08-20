@@ -10,10 +10,10 @@
     'use strict';
 
     angular
-        .module('chatbot.app.services', ['ngResource', 'chatbot.app.resources'])
+        .module('chatbot.app.services')
         .factory('Conversation', Conversation);
 
-    Conversation.$inject = ['$log', 'WatsonApi'];
+    Conversation.$inject = ['$log', 'WatsonConversationApi'];
 
     function Conversation($log, $watson) {
         var service = {
