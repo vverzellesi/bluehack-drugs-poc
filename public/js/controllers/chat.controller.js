@@ -16,9 +16,9 @@
         })
         .controller('ChatController', ChatController);
 
-    ChatController.$inject = ['$log', 'Conversation', 'STARTER_MESSAGE'];
+    ChatController.$inject = ['$scope', '$log', 'Conversation', 'TextToSpeech', 'ngAudio', 'STARTER_MESSAGE'];
 
-    function ChatController($log, Conversation, STARTER_MESSAGE) {
+    function ChatController($scope, $log, Conversation, TextToSpeech, ngAudio, STARTER_MESSAGE) {
         var vm = this;
 
         vm.input = "";
@@ -38,6 +38,20 @@
                     .then(appendWatsonReply)
                     .catch(handleWatsonError);
             }
+        }
+
+        vm.transcriptMessage = function (text) {
+            vm.sound = ngAudio.load('api/synthesize/' + text);            
+            vm.sound.play();            
+            // TextToSpeech.transcriptMessage(text)
+            //     .then(stream => {
+            //         $log.log(stream);
+            //         vm.sound = ngAudio.load(stream);
+            //         vm.sound.play();
+            //     })
+            //     .catch(err => {
+            //         $log.log(err);
+            //     })
         }
 
         function appendWatsonReply(data) {

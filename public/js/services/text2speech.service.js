@@ -11,20 +11,20 @@
 
     angular
         .module('chatbot.app.services')
-        .factory('Conversation', Conversation);
+        .factory('TextToSpeech', TextToSpeech);
 
-    Conversation.$inject = ['$log', 'WatsonConversationApi'];
+		TextToSpeech.$inject = ['$log', 'WatsonTextToSpeechApi'];
 
-    function Conversation($log, $watson) {
+    function TextToSpeech($log, $watson) {
         var service = {
-            sendMessage: sendMessage
+            transcriptMessage: transcriptMessage
         };
 
         return service;
 
-        function sendMessage(contents) {
-            return $watson.send({
-                message: contents
+        function transcriptMessage(contents) {
+            return $watson.synthesize({
+                text: contents
             }).$promise;
         }
     }

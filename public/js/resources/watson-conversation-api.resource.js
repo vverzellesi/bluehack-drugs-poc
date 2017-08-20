@@ -10,12 +10,12 @@
     'use strict';
 
     angular
-        .module('chatbot.app.resources', ['ngResource'])
-        .factory('WatsonApi', WatsonApi);
+        .module('chatbot.app.resources')
+        .factory('WatsonConversationApi', WatsonConversationApi);
 
-    WatsonApi.$inject = ['$resource'];
+    WatsonConversationApi.$inject = ['$resource'];
 
-    function WatsonApi($resource) {
+    function WatsonConversationApi($resource) {
         return $resource('/api/message', {}, {
             send: {
                 method: 'POST'

@@ -29,7 +29,7 @@
                 </li>
                 <li class="right clearfix" ng-if="message.recipient === 'watson'">
                     <span class="chat-img pull-right">
-                            <img src="http://info.timbergrove.com/hubfs/IBM_Watson_logo.png" alt="User Avatar" class="rounded-circle avatar" />
+                            <img src="http://info.timbergrove.com/hubfs/IBM_Watson_logo.png" alt="User Avatar" class="rounded-circle avatar" ng-click="vm.transcriptMessage(message.content)" style="cursor: pointer" />
                     </span>
                     <div class="chat-body clearfix">
                         <div class="header">

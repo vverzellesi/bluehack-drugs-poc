@@ -20,7 +20,7 @@ var bodyParser = require('body-parser');
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // cfenv provides access to your Cloud Foundry environment
