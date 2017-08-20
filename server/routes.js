@@ -9,8 +9,8 @@
 const express = require('express');
 const router = express.Router();
 
-const conversarion = require('./controllers/conversation.controller');
+const conversation = require('./controllers/conversation.controller');
 
-router.post('/message', conversarion.index)
+router.post('/message', conversation.index)
 
 module.exports = router;

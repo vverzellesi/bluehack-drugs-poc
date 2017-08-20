@@ -1,3 +1,8 @@
+
+'use strict'
+
+const drugs = require('../dataset/data');
+
 class ConversationService {
   get() {
     // Watson Conversation SDK
@@ -12,6 +17,15 @@ class ConversationService {
         version_date: '2016-10-21',
         version: 'v1'
     });
+  }
+
+  message(payload) {
+    return new Promise((resolve, reject) => {
+      this.get().message(payload, (err, data) => {
+        if (err) reject(err);
+        else resolve(data);
+      })
+    })
   }
 }
 
