@@ -53,6 +53,11 @@ const routes = require('./server/routes');
 
 app.use('/api', routes);
 
+// general path for serving index.html file
+app.get('*', function(req, res) {
+    res.sendFile(__dirname + '/public/index.html'); 
+});
+
 // start server on the specified port and binding host
 app.listen(env.port, '0.0.0.0', function () {
     // print a message when the server starts listening
