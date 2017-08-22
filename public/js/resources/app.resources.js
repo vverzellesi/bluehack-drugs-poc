@@ -1,6 +1,13 @@
-(function () {
-	'use strict';
+/*!
+ * ./public/js/resources/app.resources.js
+ * 
+ * Declares chatbot.app.resources module
+ * Date: August 20th, 2017
+ */
 
-	angular.module('chatbot.app.resources', ['ngResource']);
-	
+(function () {
+    'use strict';
+
+    angular.module('chatbot.app.resources', ['ngResource']);
+
 })();

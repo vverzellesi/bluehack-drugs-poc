@@ -1,9 +1,8 @@
 /*!
- * ./public/js/services/conversation.service.js
+ * ./public/js/services/text2speech.service.js
  * 
- * Declares Conversation service
- * Authors: Abner Castro
- * Date: August 16th, 2017
+ * Declares the Text to Speech service
+ * Date: August 19th, 2017
  */
 
 (function () {
