@@ -1,25 +1,24 @@
 /*!
- * ./public/js/resources/watson-api.resource.js
- * 
+ * ./public/js/resources/watson-texttospeech-api.resource.js
+ *
  * Declares Watson API service
- * Authors: Abner Castro
  * Date: August 20th, 2017
  */
 
 (function () {
-	'use strict';
+    'use strict';
 
-	angular
-		.module('chatbot.app.resources')
-		.factory('WatsonTextToSpeechApi', WatsonTextToSpeechApi);
+    angular
+        .module('chatbot.app.resources')
+        .factory('WatsonTextToSpeechApi', WatsonTextToSpeechApi);
 
-	WatsonTextToSpeechApi.$inject = ['$resource'];
+    WatsonTextToSpeechApi.$inject = ['$resource'];
 
-	function WatsonTextToSpeechApi($resource) {
-		return $resource('/api/synthesize', {}, {
-			synthesize: {
-				method: 'POST'
-			}
-		});
-	}
+    function WatsonTextToSpeechApi($resource) {
+        return $resource('/api/synthesize', {}, {
+            synthesize: {
+                method: 'POST'
+            }
+        });
+    }
 })();

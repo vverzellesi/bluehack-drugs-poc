@@ -1,9 +1,8 @@
 /*!
- * ./public/js/resources/watson-api.resource.js
- * 
+ * ./public/js/resources/watson-conversation-api.resource.js
+ *
  * Declares Watson API service
- * Authors: Abner Castro
- * Date: August 16th, 2017
+ * Date: August 20th, 2017
  */
 
 (function () {

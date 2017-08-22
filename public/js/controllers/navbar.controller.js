@@ -2,8 +2,7 @@
  * ./public/js/controllers/navbar.controller.js
  * 
  * Declares NavbarController
- * Authors: Abner Castro
- * Date: August 16th, 2017
+ * Date: August 19th, 2017
  */
 
 (function() {

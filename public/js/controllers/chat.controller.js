@@ -1,9 +1,8 @@
 /*!
  * ./public/js/controllers/chat.controller.js
- * 
+ *
  * Declares ChatController
- * Authors: Abner Castro
- * Date: August 16th, 2017
+ * Date: August 19th, 2017
  */
 
 (function () {
@@ -41,17 +40,8 @@
         }
 
         vm.transcriptMessage = function (text) {
-            vm.sound = ngAudio.load('api/synthesize/' + text);            
-            vm.sound.play();            
-            // TextToSpeech.transcriptMessage(text)
-            //     .then(stream => {
-            //         $log.log(stream);
-            //         vm.sound = ngAudio.load(stream);
-            //         vm.sound.play();
-            //     })
-            //     .catch(err => {
-            //         $log.log(err);
-            //     })
+            vm.sound = ngAudio.load('api/synthesize/' + text);
+            vm.sound.play();
         }
 
         function appendWatsonReply(data) {
@@ -82,6 +72,7 @@
         ////////////////
 
         function activate() {
+            // Fires the first message for the user
             Conversation.sendMessage(STARTER_MESSAGE.message)
                 .then(appendWatsonReply)
                 .catch(handleWatsonError);

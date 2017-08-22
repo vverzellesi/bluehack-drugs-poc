@@ -1,8 +1,16 @@
+/*!
+ * ./server/controllers/conversation.controller.js
+ *
+ * Declares the controller for the Conversation service
+ * Date: August 19th, 2017
+ */
+
 'use strict'
 
 const conversationService = require('../services/conversation.service');
 const Drugs = require('../models/drugs');
 
+// context is updated for every request
 var context = {};
 
 class ConversationController {
@@ -21,18 +29,19 @@ class ConversationController {
 
         conversationService.message(payload)
             .then((data, resolve, reject) => {
-                // update context
+                // updates context
                 context = data.context;
 
                 if (data.entities.length > 0)
                     var drug = data.entities[0].value;
 
+                // intercepts conversation flow and set context params based on drug that was found
                 if (data.output.command === "check_params") {
                     // attach params to context
                     context["checkPregnancy"] = Drugs.getAttribute(drug, 'pregnantsAllowed');
                     context["contraindicationQuestion"] = Drugs.getAttribute(drug, 'contraindicationQuestion');
                     context["interactsWithQuestion"] = Drugs.getAttribute(drug, 'interactsWithQuestion');
-                    
+
                     // dummy payload to update the context
                     const dummyPayload = {
                         workspace_id: req.workspaceId,
